@@ -1,0 +1,79 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+% Title page details: 
+\title{Assignment 9} 
+\author{Donal Loitam - AI21BTECH11009}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Papoulis chap 6 Ex 6.73}
+TABLE OF CONTENTS
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Problem}
+\textbf{6-73.} Show that for any $x$ and $y$, the random variable $z = F_x(x)$ and $w = F_y(y|x)$ are independent and each is uniform in the interval $(0,1)$
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+The system $z = F_X(x)$ \hspace{5mm} $w = F_Y(y|x)$ \hspace{3mm} has a solution only \\
+if $0 \le z \le 1$ and $0 \le w \le 1$. Furthermore, \\
+    \begin{align}
+    \frac{\partial z}{\partial x} &= f_X(x), \hspace{5mm} \frac{\partial z}{\partial y} = 0\\
+    \frac{\partial w}{\partial x} &= 0 , \hspace{12mm} \frac{\partial w}{\partial y} = f_Y(y|x)\\
+    J &= f_X(x)f_Y(y|x) \\
+    f_{zw}(z,w) &= \frac{f_{XY}(x,y)}{f_X(x)f_Y(y|x)} = 1 \hspace{4mm}  for  \hspace{3mm} 0 \le z,w \le 1
+    \end{align}
+\end{frame}
+
+
+
+% % Blocks frame
+\section{Codes}
+\begin{frame}{CODES}
+    \begin{block}{Python}
+         Download python code from - \href{...}{Python}
+    \end{block}
+
+ \begin{block}{Beamer}
+         Download Beamer code from - \href{...}{Beamer}
+    \end{block}
+\end{frame} 
+
+\end{document}

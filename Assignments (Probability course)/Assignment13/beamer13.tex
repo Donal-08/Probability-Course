@@ -1,0 +1,81 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Welcome to Overleaf --- just edit your LaTeX on the left,
+% and we'll compile it for you on the right. If you open the
+% 'Share' menu, you can invite other users to edit at the same
+% time. See www.overleaf.com/learn for more info. Enjoy!
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% Inbuilt themes in beamer
+\documentclass{beamer}
+
+% Theme choice:
+\usetheme{CambridgeUS}
+
+ \providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+ \providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+ \providecommand{\brak}[1]{\ensuremath{\left(#1\right)}}
+ \providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+
+% Title page details: 
+\title{Assignment 13} 
+\author{Donal Loitam - AI21BTECH11009}
+\date{\today}
+\logo{\large \LaTeX{}}
+
+\usepackage{hyperref}
+\usepackage{mathtools}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+\begin{document}
+
+% Title page frame
+\begin{frame}
+    \titlepage 
+\end{frame}
+
+% Remove logo from the next slides
+\logo{}
+
+
+% Outline frame
+\begin{frame}{Papoulis chap 9 Exercise 9.27}
+TABLE OF CONTENTS
+    \tableofcontents
+\end{frame}
+
+
+% Lists frame
+\section{Question}
+\begin{frame}{Problem}
+\textbf{9-27}  Show that if $x(t)$ is white house, $h(t) = 0$ outside the interval $(0,T)$, and $y(t) = x(t) * h(t) $ then $R_{yy}(t_1,t_2) = 0$ for $\left|{t_1 - t_2}\right| > T.$ 
+\end{frame}
+
+\section{Solution}
+\begin{frame}{Solution}
+\begin{align}
+y(t)' =  \int_{t-T}^{t} x(\tau)'h(t-\tau) \,d\tau
+\end{align}
+Hence, $y(t_1)'$ and $y(t_2)'$ depend linearly on the values of $x(t)'$ in the intervals $(t_1 - t, t_1)$ and $(t_2 - t, t_2)$ respectively. If $\left|{t_1 - t_2}\right| > T$ then these intervals do not overlap and since $E\cbrak{x(\tau_1)'x(\tau_2)'} = 0$ for $\tau_1 \not= \tau_2$ , it follows that $E\cbrak{y(\tau_1)'y(\tau_2)'} = 0$.
+
+\end{frame}
+
+
+
+% % Blocks frame
+\section{Codes}
+\begin{frame}{CODES}
+    \begin{block}{Python}
+         Download python code from - \href{...}{Python}
+    \end{block}
+
+ \begin{block}{Beamer}
+         Download Beamer code from - \href{https://github.com/Donal-08/Assignment12/blob/main/beamer_12.tex}{Beamer}
+    \end{block}
+\end{frame} 
+
+\end{document}

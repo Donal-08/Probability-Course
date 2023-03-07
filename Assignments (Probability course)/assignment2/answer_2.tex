@@ -1,0 +1,50 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+
+\usepackage{enumitem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\providecommand{\sbrak}[1]{\ensuremath{{}\left[#1\right]}}
+
+\title{Assignment 2 \\ \Large AI1110: Probability and Random Variables \\ \large Indian Institute of Technology Hyderabad}
+\author{Donal Loitam \\ \normalsize AI21BTECH11009 \\ \vspace*{20pt} \normalsize  12 April 2022 \\ \vspace*{20pt} \Large ICSE 2019 Grade 12}
+
+
+\begin{document}
+	% The title
+	\maketitle
+	
+	% The question
+	\textbf{Question 1(vi)} 
+	Prove that the function $f(x)=x^3-6x^2+12x+5$ is increasing on $\mathbb{R}$
+	
+	% The solution
+	\textbf{Solution.}
+	A function is said to be increasing if $\forall x_1,x_2$ that satisfies $x_2 > x_1$ , then $f(x_2)\ge f(x_1)$
+	Given function can be simplified as:
+	\begin{align}
+		f(x)&=x^3-6x^2+12x+5\\
+		    &=(x^3-6x^2+12x-8)+13\\
+		   &=(x-2)^3+13
+    \end{align}
+	
+	Let $x_2>x_1$ and $y_1=(x_1-2),y_2=(x_2-2)$ then clearly $y_2>y_1$. We have :-
+	\begin{align}
+	 f(x_2)-f(x_1)&=(x_2-2)^3-(x_1-2)^3\\
+	              &= (y_2)^3-(y_1)^3  \ge0\\
+	  \because (y_2>y_1 \implies & y_2^3 \ge y_1^3 \;)
+	            %  \therefore\;\;\;  f'(x)&\ge0 \;\;\;,\;\forall ~x \in \mathbb{R}
+	\end{align}
+	
+  Since we proved $\forall x_2>x_1 \implies f(x_2) \ge f(x_1)$    \\ 
+	$\therefore$\; $f(x)=x^3-6x^2+12x+5$ is always increasing on $\mathbb{R}$
+	
+		% The graph
+	\begin{figure}[!ht]
+		\centering
+		\includegraphics[width=\columnwidth]{mygraph.png}
+		\caption{Graph of $f(x) = x^3-6x^2+12x+5$ }
+		\label{fig-1}
+	\end{figure}
+	
+\end{document}

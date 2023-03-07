@@ -1,0 +1,69 @@
+\documentclass[journal,12pt,twocolumn]{IEEEtran}
+\usepackage{hyperref}
+\usepackage{romannum}
+\usepackage{tfrupee}
+\usepackage{enumitem}
+\usepackage{gensymb}
+\usepackage{graphicx}
+\usepackage{txfonts}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{makecell}
+
+\providecommand{\cbrak}[1]{\ensuremath{\left\{#1\right\}}}
+\providecommand{\pr}[1]{\ensuremath{\Pr\left(#1\right)}}
+\title{Assignment 3}
+\author{Donal Loitam \\ \normalsize AI21BTECH11009 \\ \vspace*{20pt} \normalsize  21 April 2022 \\ \vspace*{20pt} \Large CBSE Probability Grade 9}
+\begin{document}
+	% The title
+	\maketitle
+	
+	% The question
+	\textbf{Example 10:}
+	 Fifty seeds were selected at random from each of 5 bags of seeds, and
+were kept under standardised conditions favourable to germination. After 20 days, the number of seeds which had germinated in each collection were counted and recorded as follows:\\
+\begin{table}[ht!]
+\begin{center}
+		\input{table.tex}
+		\vspace*{5pt}
+		\caption{}
+		\label{table:table1}
+\end{center}	
+	\end{table}\\
+What is the probability of germination of
+\begin{enumerate}[label=(\roman*)]
+    \item more than $40$ seeds in a bag $?$
+ 	\item $49$ seeds in a bag $?$
+ 	\item more than $35$ seeds in a bag $?$
+    \end{enumerate}
+    
+	% The answer
+	\textbf{Solution.}
+     Let a random variable $X \in \cbrak{1,2,3,4,5}$ denote the five Bags respectively. 
+	\begin{enumerate}[label=(\roman*)]
+    \item The probability of germination of more than $40$ seeds in a bag is given by:
+	\begin{align}
+	\pr{X \in \cbrak{2,3,5}} &= \dfrac{n(X \in \cbrak{2,3,5})}{n(X \in \cbrak{1,2,3,4,5})} \\
+	&= \dfrac{3}{5}
+	\end{align}
+	$\therefore$ The probability of germination of more than $40$ seeds in a bag is $0.6$
+	
+	\item The probability of germination of $49$ seeds in a bag:
+	\begin{align}
+	\pr{X \in \emptyset} &= \dfrac{n(X \in \emptyset)}{n(X \in \cbrak{1,2,3,4,5})} \\
+	&= \dfrac{0}{5}\\
+	&= 0
+	\end{align}
+	$\therefore$ The probability of germination of $49$ seeds in a bag is $0.0$
+	
+	\item The probability of germination of more than $35$ seeds in a bag:
+	\begin{align}
+     \pr{X \in \cbrak{1,2,3,4,5}} &= \dfrac{n(X \in \cbrak{1,2,3,4,5})}{n(X \in \cbrak{1,2,3,4,5})} \\
+	&= \dfrac{5}{5}\\
+	&= 1.0
+	\end{align}
+	$\therefore$ The probability of germination of more than $35$ seeds in a bag is $1.0$
+	
+	\end{enumerate}
+	
+\end{document}
